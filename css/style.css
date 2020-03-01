@@ -111,7 +111,7 @@ a {
 
 #welcome {
   height: 80vh;
-  background-image: url("/img/Grain\ storage\ 1.gpe.png");
+  background-image: url("../img/Grain\ storage\ 1.gpe.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -209,7 +209,7 @@ a {
   right: 0;
   width: 100%;
   height: 100%;
-  background-image: url("/img/bg-last.jpg");
+  background-image: url("../img/bg-last.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
