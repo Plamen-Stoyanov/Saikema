@@ -79,7 +79,7 @@ a {
 
 .navbar-nav .nav-item {
   font-size: 16px;
-  padding: 10px;
+  padding: 7px;
   text-transform: uppercase;
   padding-right: 0;
 }
@@ -99,7 +99,7 @@ a {
 
 .navbar-nav {
   padding: 0;
-  padding-top: 12px;
+  padding-top: 13px;
 }
 
 .navbar {
@@ -175,13 +175,27 @@ a {
 
 .main .container .wrapper p {
   text-align: left;
-  padding-top: 20px;
+  padding: 20px 0;
+  margin: 0 !important
+}
+
+.main .container .row .col-md-12:nth-child(5) p {
+  padding: 31px 0;
+}
+
+.main .container .row .col-md-12:nth-child(3) p {
+  padding: 31px 0;
+}
+
+.main .container .assets {
+  float: left;
+  padding: 25px 35px 25px 25px;
 }
 
 .main .container .row .col-md-12 {
   background: #fff;
   margin-bottom: 2rem;
-  box-shadow: -4px 15px 30px -30px rgba(0, 0, 0, 1);
+  box-shadow: -8px 7px 12px -7px rgba(0, 0, 0, 1);
   z-index: 999;
   max-width: 800px;
   margin: 15px auto;
@@ -247,6 +261,63 @@ a {
   float: left;
   padding-top: 25px;
   padding-right: 20px;
+}
+
+.welcome-control {
+  position: relative;
+}
+
+.welcome-control p {
+  text-shadow: 2px 0px 0px rgba(206, 89, 55, 0);
+  text-align: left !important;
+  font-weight: 500;
+}
+
+.gallery {
+  padding: 35px 0 50px 0;
+}
+
+.welcome-control::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bg1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.gallery .col-md-12:nth-child(1) {
+  margin-top: 1rem;
+}
+
+.gallery .col-md-12:nth-child(1)::after {
+  content: "";
+  display: block;
+  margin: 15px auto;
+  width: 30%;
+  border-bottom: 5px solid var(--yelow);
+}
+
+.gallery .container {
+  margin: 10px 50px;
+  text-align: center;
+}
+
+.gallery img {
+  transition: 1s;
+  padding: 15px;
+  width: 250px;
+  height: 220px;
+}
+
+.gallery img:hover {
+  filter: grayscale(100%);
+  transform: scale(1.1);
 }
 
 /******************************************************
@@ -325,6 +396,16 @@ a {
   width: 80px;
 }
 
+.contact-info-right h3::after {
+  background-color: var(--yelow);
+  content: "";
+  display: block;
+  height: 5px;
+  margin: 15px 0px;
+  width: 80px;
+}
+}
+
 .customize-contact-alt {
   display: block;
   width: 100%;
@@ -359,6 +440,11 @@ hr.contact-divider {
 .bc-icon .fas {
   color: var(--yelow);
   font-size: 30px;
+  padding-top: 12px;
+}
+
+.box-contact:last-child .bc-icon .fas {
+  padding-top: 0;
 }
 
 .bc-caption {
@@ -368,6 +454,7 @@ hr.contact-divider {
 
 .bc-caption p {
   color: #333;
+  margin: 0;
 }
 
 .contact-info-right p {
@@ -392,6 +479,60 @@ hr.contact-divider {
   margin-top: 15px;
   font-size: 20px;
 }
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.checkmark {
+  position: absolute;
+  top: -1px;
+  left: 350px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.checkbox-container input {
+  display: none;
+}
+
+.checkbox-container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+.checkbox-container input:checked~.checkmark {
+  background-color: var(--yelow);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+
+.container input:checked~.checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
 
 .btn-contact.disabled,
 .btn-contact:disabled {
@@ -456,12 +597,13 @@ hr.contact-divider {
 }
 
 #welcome-forus {
-  text-align: center;
+  text-align: left;
   padding-bottom: 30px;
 }
 
 #welcome-forus h2 {
   font-size: 45px;
+  text-align: center;
 }
 
 #welcome-forus h2::after {
@@ -472,16 +614,16 @@ hr.contact-divider {
   border-bottom: 2px solid var(--yelow);
 }
 
-#welcome-forus-end {
+.welcome-forus-end {
   text-align: center;
   padding: 50px 0px;
 }
 
-#welcome-forus-end h2 {
+.welcome-forus-end h2 {
   font-size: 45px;
 }
 
-#welcome-forus-end h2::after {
+.welcome-forus-end h2::after {
   content: "";
   display: block;
   margin: 10px auto;
@@ -492,7 +634,34 @@ hr.contact-divider {
 .welcome-forus {
   background: var(--green);
   padding: 50px 0px;
+  position: relative;
 }
+
+/* .welcome-forus::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/grain\ mill.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.welcome-forus::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--green);
+  position: absolute;
+  opacity: 0.7;
+} */
 
 .welcome-forus .content-wrapper {
   text-align: center;
@@ -514,6 +683,10 @@ hr.contact-divider {
   position: relative;
 }
 
+.welcome-forus .content p {
+  text-align: left;
+}
+
 .welcome-forus h5::after {
   content: "";
   display: block;
@@ -526,7 +699,7 @@ hr.contact-divider {
   font-size: 60px;
   background: #fff;
   color: var(--green);
-  padding: 30px;
+  padding: 30px 40px;
   border-radius: 50%;
   margin-bottom: 30px;
 }
@@ -559,6 +732,12 @@ hr.contact-divider {
 
 #call-us-now .wrapper .fas {
   color: var(--yelow);
+  transform: rotate(-45deg);
+}
+
+#welcome-forus-end {
+  text-align: center;
+  padding: 50px 0;
 }
 
 #welcome-forus-end .button {
@@ -648,6 +827,48 @@ hr.contact-divider {
   padding: 50px 0 200px 0;
 }
 
+
+/*******************************************************
+* FUMIGATION PAGE 
+*******************************************************/
+
+.welcome-control {
+  padding: 100px 0px;
+  position: relative;
+  background: #fff;
+}
+
+.welcome-control .wrapper img {
+  max-width: 300px;
+  height: auto;
+}
+
+.welcome-control .wrapper div {
+  background: #3C3C3C;
+  width: 300px;
+  text-align: center;
+  color: white;
+}
+
+.welcome-control .wrapper div h3 {
+  margin: 0 auto;
+  padding: 15px 0px;
+}
+
+.welcome-control .wrapper div h3 strong {
+  color: var(--yelow);
+}
+
+.welcome-fumigation-middle {
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.welcome-forus p {
+  color: #fff;
+  margin-top: 100px;
+  text-align: center;
+}
 
 /******************************************************
 * PRODUCTS ACHIVE PAGE
